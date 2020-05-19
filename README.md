@@ -1,5 +1,3 @@
-Testing
-
 # Template web app using docker containers.
 Builds Docker containers (Mosquitto, Node-RED, PostgreSQL, InfluxDB, Grafana) and configures
 them for a general web app.
