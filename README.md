@@ -1,12 +1,13 @@
 # Template web app using docker containers.
 Builds Docker containers (Mosquitto, Node-RED, PostgreSQL, InfluxDB, Grafana) and configures them for a general web app.
 
-Container Locations
-  * localhost:1880 opens Node-Red (add /ui for website)
-  * localhost:8888 opens jupyter notebook
-  * localhost:5000 opens flask test webpage
-  * localhost:3000 opens grafana database
-  * localhost:8086 opens influx database
+## Container Ports
+1. localhost:1880 opens Node-Red
+  * Add /ui for website
+2. localhost:8888 opens jupyter notebook
+3. localhost:5000 opens flask test webpage
+4. localhost:3000 opens grafana database
+5. localhost:8086 opens influx database
 
 ## Customization
 1. PostgreSQL
