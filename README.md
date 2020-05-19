@@ -1,35 +1,12 @@
 # Template web app using docker containers.
-Builds Docker containers (Mosquitto, Node-RED, PostgreSQL, InfluxDB, Grafana) and configures
-them for a general web app.
+Builds Docker containers (Mosquitto, Node-RED, PostgreSQL, InfluxDB, Grafana) and configures them for a general web app.
 
-## Overview
-* *docker-compose.yml*:
-  * Creates services with volumes and network
-    * Mosquitto
-    * Node-RED
-    * PostgreSQL
-    * InfluxDB
-    * Grafana
-* *docker_teardown.sh*
-  * Removes all containers, images, volumes and networks associated with this repository
-
-## Getting started
-1. clone this repository
-2. run docker-compose
-`$docker-compose up -d`
-3. Open browser to localhost:1880
-  * In the PostgreSQL flow open the postgres node and edit the defined database.
-    * Insert the user and password defined in the postgres/Dockerfile. You should
-    change these if you want to deploy externally.
-      * user: postgres
-      * password: postgrespassword
-  * Deploy the flow when done
-4. Open browser to localhost:3000
-  * Default username and password:
-    * user: admin
-    * password: grafana
-  * The *Example Dashboard* demonstrates the plotting of data stored in the postgres
-  and influx databases.
+Container Locations
+  * localhost:1880 opens Node-Red (add /ui for website)
+  * localhost:8888 opens jupyter notebook
+  * localhost:5000 opens flask test webpage
+  * localhost:3000 opens grafana database
+  * localhost:8086 opens influx database
 
 ## Customization
 1. PostgreSQL
@@ -54,11 +31,3 @@ them for a general web app.
   * Create/modify dashboards. The pre-installed dashboard is in *grafana/grafana.db*,
   which gets coppied to */var/lib/grafana* within the container and is a named volume
   *grafana-data*.
-
-# Author
-
-**Brent Maranzano**
-
-# License
-
-This project is licensed under the MIT License - see the LICENSE file for details
